@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* header */
+
+.header-portfolio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3ede9;
+    padding: 20px;
+    position: fixed;
+    width: 99%;
+    z-index: 2;
+}
+
+.portfolio-header-text{
+    font-weight: normal;
+    color: #b4b4b4;
+}
+
+.portfolio-settings{
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-settings h2{
+    margin-right: 20px;
+    color: #ddbeaa;
+}
+
+.portfolio-settings button{
+    margin-right: 10px;
+    outline: none;
+    background: #ddbeaa;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.theme-button:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.portfolio-link {
+    background-image: linear-gradient(
+      to right,
+      #d7b9a5,
+      #d7b9a5 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+  }
+
+  .portfolio-link.active-link {
+    background-image: linear-gradient(
+      to right,
+      #cca387,
+      #cca387 100%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  
+  .portfolio-link:before {
+    content: '';
+    background: #d7b9a5;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .portfolio-link:hover {
+   background-position: 0;
+  }
+  
+  .portfolio-link:hover::before {
+    width:100%;
+  }
+
+/* main */
+
+.portfolio-main{
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-text{
+    font-size: 50px;
+    text-align: center;
+    color: darksalmon;
+}
+
+.contacts{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.email{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    background: #f9d8c2;
+    padding: 20px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease-out 100ms;
+}
+
+.email:hover{
+    background: #d87c7c;
+}
+
+.email p{
+    margin-left: 20px;
+}
+
+.email-link{
+   margin: 0 auto;
+    display: none;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.telegram-box{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    background: #f9d8c2;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: background-color 0.5s ease-out 100ms;
+}
+
+.telegram-box:hover{
+    background: #d87c7c;
+}
+
+.telegram-box p{
+    margin-left: 20px;
+}
+
+.telegram-link{
+   margin: 0 auto;
+    display: none;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.instagram-box{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    background: #f9d8c2;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 50px;
+    transition: background-color 0.5s ease-out 100ms;
+    margin-bottom: 50px;
+}
+
+.instagram-box:hover{
+    background: #d87c7c;
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+}
+
+.instagram-box p{
+    margin-left: 20px;
+}
+
+.instagram-link{
+   margin: 0 auto;
+    display: none;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+.shown{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+/* footer */
+
+.portfolio-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3ede9;
+    padding: 20px;
+}
+
+.portfolio-footer-text{
+    font-weight: normal;
+    color: #b4b4b4;
+}
+
+.portfilo-socials-list{
+    display: flex;
+    list-style-type: none;
+}
+
+.portfilo-socials-list li{
+    margin-right: 20px;
+}
+
+.social-photo{
+    height: 30px;
+}
+
+/* dark theme */
+
+.container.dark-theme{
+    background:#191825;
+}
+
+.container.dark-theme .header-portfolio{
+    background:#7d00a3;
+}
+
+.container.dark-theme .portfolio-header-text{
+    color: #865DFF;
+}
+
+.container.dark-theme .portfolio-settings h2{
+    color: #E384FF;
+}
+
+.container.dark-theme .portfolio-settings button{
+    background: #E384FF;
+}
+
+.container.dark-theme .portfolio-link{
+    background-image: linear-gradient(
+      to right,
+      #9977fc,
+      #9977fc 50%,
+      #000 50%
+    );
+}
+
+.container.dark-theme .portfolio-link.active-link{
+    background-image: linear-gradient(
+      to right,
+      #9977fc,
+      #9977fc 100%,
+      #000 50%
+    );
+}
+
+.container.dark-theme .portfolio-link:before{
+    background: #9977fc;
+}
+
+.container.dark-theme .portfolio-footer{
+    background:#7d00a3;
+}
+
+.container.dark-theme .portfolio-footer .portfolio-footer-text{
+    color:#FFA3FD;
+}
+
+.container.dark-theme .portfilo-socials-list li{
+    background: #fff;
+    border-radius: 100%;
+    padding: 0;
+    height: 30px;
+}
+
+.container.dark-theme .up{
+    background: #b85fb6;
+    box-shadow:10px 10px 10px 0 #7a3779;
+    color: black;
+}
+
+.container.dark-theme .email{
+    background: #9977fc;
+}
+
+.container.dark-theme .email:hover{
+    background: #7d00a3;
+}
+
+.container.dark-theme .telegram-box{
+    background: #9977fc;
+}
+
+.container.dark-theme .telegram-box:hover{
+    background: #7d00a3;
+}
+
+.container.dark-theme .instagram-box{
+    background: #9977fc;
+}
+
+.container.dark-theme .instagram-box:hover{
+    background: #7d00a3;
+}
+
+.container.dark-theme .main-text{
+    color:#5236a5 ;
+}
